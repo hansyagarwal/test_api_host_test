@@ -15,12 +15,7 @@ let data = [
 
 ]
 
-app.listen(PORT, ()=>{
-    console.log("Server Listening on PORT:", PORT);
-
-});
-
-app.get('/status', (req,res) =>{
+app.get('/', (req,res) =>{
 
     const status = {
         "Status" : "Running",
@@ -29,4 +24,9 @@ app.get('/status', (req,res) =>{
     };
 
     res.send(status);
+});
+
+app.listen(PORT, ()=>{
+    console.log("Server Listening on PORT:", PORT);
+
 });
